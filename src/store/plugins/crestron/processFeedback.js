@@ -16,7 +16,7 @@ let feedbackJoins = {
         // to true.
         if (boolValue) {
           console.log("Set to green " + boolValue);
-          store.commit("lager/setPowerFeedback", {
+          store.commit("setPowerFeedback", {
             id: "lagerSlide_1",
             power: true,
           });
@@ -30,7 +30,7 @@ let feedbackJoins = {
         // is high before committing the mutation.  If you wanted, you could
         // use a single join for this, and commit on high and low.
         if (boolValue) {
-          store.commit("lager/setPowerFeedback", {
+          store.commit("setPowerFeedback", {
             id: "lagerSlide_2",
             power: true,
           });
@@ -44,7 +44,7 @@ let feedbackJoins = {
         // is used for power state, instead of one join for power on and another join
         // for power off
         if (boolValue) {
-          store.commit("lager/setPowerFeedback", {
+          store.commit("setPowerFeedback", {
             id: "lagerSlide_2",
             power: true,
           });

@@ -998,6 +998,11 @@
     "ssh2" "0.8.2"
     "ssh2-sftp-client" "5.3.1"
 
+"@crestron/ch5-webxpanel@^2.0.0":
+  "integrity" "sha512-SCZnhk9LyMKwAIEd9W0MUZXvkZBIriMn2N4qHUkybDdl+pbn3E/rcSCBWc+oMLM3pSgt7UVrSkNX9N87k97CYg=="
+  "resolved" "https://registry.npmjs.org/@crestron/ch5-webxpanel/-/ch5-webxpanel-2.0.0.tgz"
+  "version" "2.0.0"
+
 "@eslint/eslintrc@^0.4.3":
   "integrity" "sha512-J6KFFz5QCYUJq3pf0mjEcCJVERbzv71PUIDczuh9JkwGEzced6CO5ADLHB1rbf/+oPBtoPfMYNOpGDzCANlbXw=="
   "resolved" "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-0.4.3.tgz"

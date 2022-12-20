@@ -17,7 +17,7 @@ export default function processMutation(store, mutation) {
   // commands that need to be sent back to the system.  Consider carefully how
   // you structure your code to minimize code bloat in this function.
   switch (mutation.type) {
-    case "lager/setPower": {
+    case "setPower": {
       // The mutation payload is a single object that uses destructuring
       // to include however many properties you need.  The payload for the
       // setPower function includes an id and a power boolean.

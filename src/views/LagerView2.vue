@@ -2,11 +2,7 @@
   <header class="header">
     <v-app>
       <div id="lager" class="container">
-        <div
-          class="sliders"
-          v-for="lager in $store.state.lager.lagerList"
-          :key="lager.id"
-        >
+        <div class="sliders" v-for="lager in lagerLista" :key="lager.id">
           <button
             class="btn-default red"
             :class="{
@@ -59,21 +55,20 @@
   </header>
 </template>
 <script>
-import { mapMutations } from "vuex";
+import { mapMutations, mapState, mapGetters } from "vuex";
 
 export default {
   data: () => ({
     //
   }),
   methods: {
-    ...mapMutations("lager", ["setPower"]),
+    ...mapMutations(["setPower", "setPowerFeedback"]),
     ...mapMutations("lager", ["setPlayer1"]),
     ...mapMutations("lager", ["setPlayer2"]),
   },
   computed: {
-    sliderValue() {
-      return this.lager.slider;
-    },
+    ...mapState(["lagerLista"]),
+    ...mapGetters(["getPowerFeedback"]),
   },
 };
 </script>

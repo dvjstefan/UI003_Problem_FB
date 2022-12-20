@@ -3,7 +3,7 @@ const lager = {
   namespaced: true,
   state() {
     return {
-      lagerList: [
+      /*lagerList: [
         {
           id: "lagerSlide_1",
           name: "Test 1",
@@ -52,12 +52,16 @@ const lager = {
           mediaplayer_2: true,
           slider: 0,
         },
-      ],
+      ],*/
     };
   },
   mutations: {
-    setPowerFeedback(state, { id, power }) {
-      state.lagerList[id].power = power;
+    setPowerFeedback(state, payload) {
+      //console.log("Payload check: " + [payload.id] + " " + payload.power);
+      //console.log(state.lagerList[payload.id] + " " + [payload.id].power);
+      const list = state.lagerLista.find((list) => list.id == [payload.id]);
+      list.power = [payload.id].power;
+      //state.lagerList[payload.id].power = payload.power;
     },
     setPower(state, { id, power }) {
       // Empty mutation for Vuex
@@ -69,11 +73,7 @@ const lager = {
       //
     },
   },
-  actions: {
-    setSlider(state, { id, slider }) {
-      console.log("setSlider");
-    },
-  },
+  actions: {},
   getters: {},
 };
 

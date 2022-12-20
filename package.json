@@ -7,13 +7,17 @@
     "build": "vue-cli-service build",
     "build:archive:dev": "vue-cli-service build --mode development && ch5-cli archive -p tsw1070 -d dist -o tsw",
     "build:archive:prod": "vue-cli-service build && ch5-cli archive -p tsw1070 -d dist -o tsw",
+    "build:web": "npm run build && ch5-cli archive -p vuexweb -d dist -o xweb",
+    "deployweb": "ch5-cli deploy -H 192.168.40.10 -p -t web ./xweb/vuexweb.ch5z",
     "deploy": "ch5-cli deploy -H 192.168.0.212 -p -t touchscreen tsw/tsw1070.ch5z",
     "onestep:dev": "npm run build:archive:dev && npm run deploy",
     "onestep:prod": "npm run build:archive:prod && npm run deploy",
+    "onestep:web": "npm run build:web && npm run deployweb",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@crestron/ch5-crcomlib": "^2.0.0",
+    "@crestron/ch5-webxpanel": "^2.0.0",
     "core-js": "^3.8.3",
     "eruda": "^2.6.2",
     "lodash": "^4.17.21",
